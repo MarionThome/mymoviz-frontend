@@ -13,7 +13,9 @@ function Home() {
   useEffect(() => {
     fetch("https://mymoviz-backend-kappa.vercel.app/movies")
       .then((response) => response.json())
-      .then((data) => setMoviesData(data.movies));
+      .then((data) => 
+      console.log(data),
+      setMoviesData(data.movies));
   }, []);
 
   const updateLikedMovies = (movieTitle) => {
