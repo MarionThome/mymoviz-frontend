@@ -11,7 +11,7 @@ function Home() {
   const [moviesData, setMoviesData] = useState([]);
   // Liked movies (inverse data flow)
   useEffect(() => {
-    fetch("mymoviz-backend-kappa.vercel.app/movies")
+    fetch("https://mymoviz-backend-kappa.vercel.app/movies")
       .then((response) => response.json())
       .then((data) => setMoviesData(data.movies));
   }, []);
